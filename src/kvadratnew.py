@@ -1,14 +1,12 @@
 from dotenv import dotenv_values
-
-def get_square(storona):
-    drygaystorona=''
-    for i in range(0, storona):
-    	drygaystorona+='*'*storona
-    	drygaystorona+='\n'
-    return drygaystorona
-config = dotenv_values('.env')
-string_storona = config['storona']
-storona = int(string_storona)
-square = get_square(storona)
+def get_square(min1):
     
-print(square)
+    for i in range (0, 500):
+        min1+=(i)
+    return min1
+config = dotenv_values('.env')
+string_min1 = config['min1']
+min1 = int(string_min1)
+square = get_square(min1)
+
+print(f'число{min1} равна {square}')
